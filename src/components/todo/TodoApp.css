@@ -1,0 +1,22 @@
+label , input ,button{
+    margin: 10px;
+    padding: 5px;
+}
+
+.ErrorMessage{
+color: red;
+margin: 10px;
+padding: 5px;
+font-size: 20px;
+}
+
+.SuccessMessage{
+    color: green;
+    margin: 10px;
+    padding: 5px;
+    font-size: 20px;
+    }
+
+    footer{
+        bottom: 0;
+    }
