@@ -10,7 +10,7 @@ export default function LoginComponent(){
     const navigate = useNavigate();
     const authContex = useAuth();
 
-    console.log(authContex);
+    
    
     function handleUsernameChange(event){
        setUsername(event.target.value);
@@ -20,8 +20,8 @@ export default function LoginComponent(){
         setPassword(event.target.value);
      }
 
-     function handleSubmit(){
-       if(authContex.login(username,password)){
+     async function handleSubmit(){
+       if(await authContex.login(username,password)){
         navigate(`/welcome/${username}`);
        }else{
         setErrorMessage(true);
@@ -46,7 +46,7 @@ export default function LoginComponent(){
                     <input type="password" name="password" value={password} onChange={handlePasswordChange}></input>
                 </div>
                 <div>
-                    <button type="button" name="login" onClick={handleSubmit}>Login</button>
+                    <button type="button" name="login" className="btn btn-primary m-5" onClick={handleSubmit}>Login</button>
                 </div>
             </div>
 
