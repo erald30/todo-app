@@ -4,13 +4,13 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-@CrossOrigin(origins = "http://localhost:3000",allowCredentials= "true")
+//@CrossOrigin(origins = "http://localhost:3000",allowCredentials= "true")
 @RestController
 public class HelloWorldController {
 	
-	@GetMapping(path = "/hello-world")
-	public String helloWorld() {
-		return "Hello World from Rest Api";
+	@GetMapping(path = "/basicAuth")
+	public String basicAuthCheck() {
+		return "Success";
 	}
 	
 	@GetMapping(path = "/hello-world-bean")
